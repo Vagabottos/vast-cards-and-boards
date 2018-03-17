@@ -37,3 +37,13 @@
     text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
   }
 }
+
+image-viewer ion-backdrop {
+  opacity: 0.8 !important;
+}
+
+.true-center, .true-center .scroll-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

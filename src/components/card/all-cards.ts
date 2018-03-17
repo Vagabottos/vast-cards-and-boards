@@ -38,6 +38,21 @@ export const AllCards = {
       { name: 'Rune Staff' },
       { name: 'Heroic Boots' },
       { name: 'Javelin' }
+    ],
+    Terrain: [
+      { name: 'Canyon' },
+      { name: 'Lake' },
+      { name: 'Magma' },
+      { name: 'Mushroom Forest' },
+      { name: 'Pits' },
+      { name: 'River' }
+    ],
+    Difficulty: [
+      { name: 'Lava Tube [Easiest]' },
+      { name: 'Spillway [Easy]' },
+      { name: 'Cave [Standard]' },
+      { name: 'Great Cave [Hard]' },
+      { name: 'Grand Cave [Expert]' }
     ]
   },
 
@@ -64,6 +79,13 @@ export const AllCards = {
       { name: 'Golden Scale' },
       { name: 'Silver Scale' },
       { name: 'Platinum Scale' }
+    ],
+    Difficulty: [
+      { name: 'Hatchling [Easiest]' },
+      { name: 'Whelp [Easy]' },
+      { name: 'Dragon [Standard]' },
+      { name: 'Elder Dragon [Hard]' },
+      { name: 'Ancient Dragon [Expert]' }
     ]
   },
 
@@ -78,6 +100,16 @@ export const AllCards = {
       { name: 'Ghost' },
       { name: 'Possessed Unicorn' },
       { name: 'Possessed Vile Ghoul' }
+    ],
+    Difficulty: [
+      { name: 'Spirit [Easiest]' },
+      { name: 'Specter [Easy]' },
+      { name: 'Ghost [Standard]' },
+      { name: 'Phantom [Hard]' },
+      { name: 'Wraith [Expert]' }
+    ],
+    Reference: [
+      { name: 'Blocking the Ghost' }
     ]
   },
 
@@ -96,6 +128,16 @@ export const AllCards = {
       { name: 'Adapt' },
       { name: 'Seize' },
       { name: 'Scour' }
+    ],
+    Difficulty: [
+      { name: 'Ragpicker [Easiest]' },
+      { name: 'Scavenger [Easy]' },
+      { name: 'Ghoul [Standard]' },
+      { name: 'Stalker [Hard]' },
+      { name: 'Hunter [Expert]' }
+    ],
+    Reference: [
+      { name: 'Attacking the Ghoul' }
     ]
   },
 
@@ -147,6 +189,13 @@ export const AllCards = {
       { name: 'Fear' },
       { name: 'Desperation' },
       { name: 'Pain' }
+    ],
+    Difficulty: [
+      { name: 'Miscreant [Easiest]' },
+      { name: 'Boss [Easy]' },
+      { name: 'Chief [Standard]' },
+      { name: 'Master [Hard]' },
+      { name: 'Warlord [Expert]' }
     ]
   },
 
@@ -164,6 +213,13 @@ export const AllCards = {
       { name: 'Persistent' },
       { name: 'Prepared' },
       { name: 'Noble Failure' }
+    ],
+    Difficulty: [
+      { name: 'Novice [Easiest]' },
+      { name: 'Squire [Easy]' },
+      { name: 'Knight [Standard]' },
+      { name: 'Baroness [Hard]' },
+      { name: 'Lady [Expert]' }
     ]
   },
 
@@ -172,6 +228,13 @@ export const AllCards = {
       { name: 'Charm' },
       { name: 'Warlock\'s Wand' },
       { name: 'Cloak of the Mountebank' }
+    ],
+    Difficulty: [
+      { name: 'Footpad [Easiest]' },
+      { name: 'Burglar [Easy]' },
+      { name: 'Thief [Standard]' },
+      { name: 'Prowler [Hard]' },
+      { name: 'Invader [Expert]' }
     ]
   },
 
@@ -200,7 +263,29 @@ export const AllCards = {
       { name: 'Move 2 -or- Turn Left' },
       { name: 'Move 3 (Angry)' },
       { name: 'Move 2 -or- Turn Right' },
-      { name: 'Turn Right (Angry)' },
+      { name: 'Turn Right (Angry)' }
+    ],
+    Difficulty: [
+      { name: 'Terror Pony [Easiest]' },
+      { name: 'Night Mare [Easy]' },
+      { name: 'Nightmare Unicorn [Standard]' },
+      { name: 'Dire Unicorn [Hard]' },
+      { name: 'Phantasm Unicorn [Expert]' }
+    ],
+    Reference: [
+      { name: 'Attacking the Unicorn' }
+    ]
+  },
+
+  Miscellaneous: {
+    Variant: [
+      { name: 'Flare' },
+      { name: 'Goblin Infestation' },
+      { name: 'Ash Dragon' },
+      { name: 'Past Plunder' },
+      { name: 'Alone in the Dark' },
+      { name: 'Alone in the Dark II' },
+      { name: 'Crowded House' }
     ]
   }
 };
