@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar [color]="role.toLowerCase()">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>The {{ role }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides loop="true" centeredSlides="true" pager="true" paginationType="fraction" slidesPerView="2" spaceBetween="13" zoom="true">
+    <ion-slide *ngFor="let card of allCards">
+      <card [cardRole]="role" [cardType]="card.type" [cardIndex]="card.index"></card>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
