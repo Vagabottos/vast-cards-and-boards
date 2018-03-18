@@ -57,7 +57,7 @@ export class RolePage implements OnInit {
 
     this.updateAllCards();
 
-    this.lastViewedCard = await this.storage.get(this.lastslideKey);
+    this.lastViewedCard = await this.storage.get(this.lastslideKey) || 0;
     this.isLoaded = true;
   }
 
