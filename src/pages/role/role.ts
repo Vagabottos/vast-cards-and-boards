@@ -1,11 +1,13 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { NavParams, IonicPage, Platform, Slides } from 'ionic-angular';
+import { NavParams, IonicPage, Platform, Slides, PopoverController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
+
+import { ImageViewerController }  from 'ionic-img-viewer';
 
 import * as _ from 'lodash';
 
 import { Role } from '../../app/defs';
-import { AllCards, Card } from '../../components/card/all-cards';
+import { AllRules, AllBoards, AllCards, Card } from '../../app/all-cards';
 
 @IonicPage({
   name: 'Role',
@@ -26,21 +28,41 @@ export class RolePage implements OnInit {
 
   public lastViewedCard = 0;
 
+  public get hasMultipleBoards(): boolean {
+    return AllBoards[this.role].length > 1;
+  }
+
+  public get hasMultipleRules(): boolean {
+    return AllRules[this.role].length > 1;
+  }
+
+  public get cardTypes(): string[] {
+    return Object.keys(AllCards[this.role]);
+  }
+
   private get lastslideKey(): string {
     return `${this.role}-lastslide`;
   }
 
   constructor(
     public navParams: NavParams,
+    public platform: Platform,
+    private popoverCtrl: PopoverController,
     private storage: Storage,
-    public platform: Platform
+    private imageViewer: ImageViewerController
   ) {}
 
   async ngOnInit() {
     this.role = this.navParams.get('role');
 
-    const cardTypes = Object.keys(AllCards[this.role]);
-    this.allCards = _(cardTypes)
+    this.updateAllCards();
+
+    this.lastViewedCard = await this.storage.get(this.lastslideKey);
+    this.isLoaded = true;
+  }
+
+  private updateAllCards() {
+    this.allCards = _(this.cardTypes)
       .map(type => {
         const arr = AllCards[this.role][type];
         arr.forEach((card, index) => {
@@ -51,14 +73,81 @@ export class RolePage implements OnInit {
       })
       .flattenDeep()
       .value();
-
-    this.lastViewedCard = await this.storage.get(this.lastslideKey);
-    this.isLoaded = true;
   }
 
   public updateCurrentSlide(slider: Slides) {
     this.storage.set(this.lastslideKey, slider.realIndex);
-    
   }
 
+  public openRules(idx = 0) {
+    const img = document.createElement('img');
+    img.src = `assets/vast/${this.role.toLowerCase()}-rules-${idx}.png`;
+    this.imageViewer.create(img).present();
+  }
+
+  public openBoard(idx = 0) {
+    const img = document.createElement('img');
+    img.src = `assets/vast/${this.role.toLowerCase()}-board-${idx}.png`;
+    this.imageViewer.create(img).present();
+  }
+
+  public openPopover($event) {
+
+    const opts = { boards: [], rules: [] };
+
+    if(this.hasMultipleBoards) {
+      opts.boards = AllBoards[this.role].map((boardName, idx) => {
+        return {
+          name: boardName,
+          click: () => this.openBoard(idx)
+        };
+      });
+    }
+
+    if(this.hasMultipleRules) {
+      opts.rules = AllRules[this.role].map((rulesName, idx) => {
+        return {
+          name: rulesName,
+          click: () => this.openRules(idx)
+        };
+      });
+    }
+
+    const popover = this.popoverCtrl.create(OverflowOptionsPage, opts);
+
+    popover.present({
+      ev: $event
+    });
+  }
+
+}
+
+@Component({
+  template: `
+    <ion-list>
+      <ion-item-divider color="dark" *ngIf="boards.length > 0">Boards</ion-item-divider>
+      <ion-item *ngFor="let board of boards" (click)="board.click()">
+        {{ board.name }}
+      </ion-item>
+      
+      <ion-item-divider color="dark" *ngIf="rules.length > 0">Rules</ion-item-divider>
+      <ion-item *ngFor="let rules of rules" (click)="rules.click()">
+        {{ rules.name }}
+      </ion-item>
+    </ion-list>
+  `
+})
+export class OverflowOptionsPage {
+
+  public boards: any[] = [];
+  public rules: any[] = [];
+
+  constructor(
+    public navParams: NavParams
+  ) {}
+
+  ngOnInit() {
+    this.boards = this.navParams.get('boards');
+    this.rules  = this.navParams.get('rules');
+  }
 }

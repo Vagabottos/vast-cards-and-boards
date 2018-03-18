@@ -6,20 +6,20 @@
     <ion-title>The {{ role }}</ion-title>
 
     <ion-buttons end>
-      <button ion-button icon-only margin-right margin-left>
+      <button ion-button icon-only margin-right margin-left (click)="openRules()" *ngIf="!hasMultipleRules">
         <ion-icon name="book"></ion-icon>
       </button>
-      <button ion-button icon-only margin-right margin-left>
+      <button ion-button icon-only margin-right margin-left (click)="openBoard()" *ngIf="!hasMultipleBoards">
         <ion-icon name="square-outline"></ion-icon>
+      </button>
+      <button ion-button icon-only (click)="openPopover($event)" *ngIf="hasMultipleRules || hasMultipleBoards">
+        <ion-icon name="more"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding class="true-center">
-
-  <!-- todo add ion-col *ngFor cateogry in cateogories and have filters based on the cateogories available -->
-  <!-- TODO instead add an overflow menu with the different boards (if more than one) *-->
 
   <ion-slides *ngIf="isLoaded"
               loop="true"

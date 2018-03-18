@@ -3,7 +3,7 @@
   "description": "A tool to help play Vast! The Crystal Caverns",
   "version": "0.0.1",
   "author": "Kyle Kemp <kyle@seiyria.com>",
-  "homepage": "http://vast.seiyria.com/",
+  "homepage": "https://vast.seiyria.com/",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
