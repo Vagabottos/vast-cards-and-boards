@@ -3,15 +3,13 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { SearchPage } from '../pages/search/search';
-
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = SearchPage;
+  rootPage: any = 'Search';
 
   pages: Array<{ title: string, component: any, color: string, icon?: string }>;
 
@@ -20,7 +18,7 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Search',      component: SearchPage,    color: '',     icon: 'search' },
+      { title: 'Search',      component: 'Search',      color: '',     icon: 'search' },
       { title: 'Cave',        component: 'Role',        color: 'cave' },
       { title: 'Dragon',      component: 'Role',        color: 'dragon' },
       { title: 'Ghost',       component: 'Role',        color: 'ghost' },

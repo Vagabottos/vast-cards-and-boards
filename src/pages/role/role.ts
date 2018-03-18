@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { NavParams, IonicPage, Platform } from 'ionic-angular';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NavParams, IonicPage, Platform, Slides } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 import * as _ from 'lodash';
 
-import { CARD_WIDTH, Role } from '../../app/defs';
+import { Role } from '../../app/defs';
 import { AllCards, Card } from '../../components/card/all-cards';
 
 @IonicPage({
@@ -16,22 +17,26 @@ import { AllCards, Card } from '../../components/card/all-cards';
 })
 export class RolePage implements OnInit {
 
+  @ViewChild(Slides) slides: Slides;
+
+  public isLoaded: boolean;
+
   public role: Role;
   public allCards: Card[] = [];
 
-  public get numSlides(): number {
-    const width = window.innerWidth;
-    if(width >= (CARD_WIDTH * 5) + 500) return 4;
-    if(width >= (CARD_WIDTH * 2) + 300) return 3;
-    return 2;
+  public lastViewedCard = 0;
+
+  private get lastslideKey(): string {
+    return `${this.role}-lastslide`;
   }
 
   constructor(
     public navParams: NavParams,
+    private storage: Storage,
     public platform: Platform
   ) {}
 
-  ngOnInit() {
+  async ngOnInit() {
     this.role = this.navParams.get('role');
 
     const cardTypes = Object.keys(AllCards[this.role]);
@@ -46,6 +51,14 @@ export class RolePage implements OnInit {
       })
       .flattenDeep()
       .value();
+
+    this.lastViewedCard = await this.storage.get(this.lastslideKey);
+    this.isLoaded = true;
+  }
+
+  public updateCurrentSlide(slider: Slides) {
+    this.storage.set(this.lastslideKey, slider.realIndex);
+    
   }
 
 }

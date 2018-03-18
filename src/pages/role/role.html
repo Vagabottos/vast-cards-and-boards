@@ -19,8 +19,18 @@
 <ion-content padding class="true-center">
 
   <!-- todo add ion-col *ngFor cateogry in cateogories and have filters based on the cateogories available -->
+  <!-- TODO instead add an overflow menu with the different boards (if more than one) *-->
 
-  <ion-slides loop="true" centeredSlides="true" pager="true" paginationType="fraction" slidesPerView="1" spaceBetween="13" zoom="true">
+  <ion-slides *ngIf="isLoaded"
+              loop="true"
+              centeredSlides="true"
+              pager="true"
+              paginationType="fraction"
+              slidesPerView="1"
+              spaceBetween="13"
+              [initialSlide]="lastViewedCard"
+              (ionSlideDidChange)="updateCurrentSlide($event)"
+              zoom="true">
     <ion-slide *ngFor="let card of allCards">
       <card [cardRole]="role" [cardType]="card.type" [cardIndex]="card.index"></card>
     </ion-slide>

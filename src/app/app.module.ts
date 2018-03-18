@@ -4,25 +4,24 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
 
 import { MyApp } from './app.component';
-import { SearchPage } from '../pages/search/search';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
-    MyApp,
-    SearchPage
+    MyApp
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot(),
     IonicImageViewerModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    SearchPage
+    MyApp
   ],
   providers: [
     StatusBar,
