@@ -1,16 +1,44 @@
 <ion-header>
-  <ion-navbar>
+
+  <ion-navbar color="dark">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title color="dark">Search</ion-title>
+    <ion-title>Search</ion-title>
   </ion-navbar>
+
+  <ion-toolbar color="cave">
+
+    <ion-searchbar [(ngModel)]="searchString"
+                   placeholder="Search all cards..."
+                   showCancelButton="true"
+                   (ionInput)="doSearch()"
+    ></ion-searchbar>
+
+  </ion-toolbar>
+
 </ion-header>
 
 <ion-content padding>
-  <ion-row>
-    <ion-col>
-      <ion-searchbar></ion-searchbar>
-    </ion-col>
-  </ion-row>
+
+  <div class="empty-slate" *ngIf="searchedCards.length === 0">
+    No search results<br><br>
+    
+    Separate search terms by commas to narrow down results, ie, "cave, difficulty"
+  </div>
+
+
+  <ion-slides *ngIf="searchedCards.length > 0"
+              loop="true"
+              centeredSlides="true"
+              pager="true"
+              paginationType="fraction"
+              slidesPerView="1"
+              spaceBetween="13"
+              zoom="true">
+    <ion-slide *ngFor="let card of searchedCards">
+      <card [cardRole]="card.role" [cardType]="card.type" [cardIndex]="card.index"></card>
+    </ion-slide>
+  </ion-slides>
+
 </ion-content>

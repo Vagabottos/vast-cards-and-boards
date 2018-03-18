@@ -1,5 +1,5 @@
 
-import { CardType } from './defs';
+import { CardType, Role } from './defs';
 
 export const AllRules = {
   Cave: [
@@ -80,6 +80,7 @@ export const AllBoards = {
 
 export interface Card {
   name: string;
+  role: Role;
   type: CardType;
   index: number;
 }

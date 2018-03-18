@@ -18,15 +18,15 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Search',      component: 'Search',      color: '',     icon: 'search' },
-      { title: 'Cave',        component: 'Role',        color: 'cave' },
-      { title: 'Dragon',      component: 'Role',        color: 'dragon' },
-      { title: 'Ghost',       component: 'Role',        color: 'ghost' },
-      { title: 'Ghoul',       component: 'Role',        color: 'ghoul' },
-      { title: 'Goblins',     component: 'Role',        color: 'goblins' },
-      { title: 'Knight',      component: 'Role',        color: 'knight' },
-      { title: 'Thief',       component: 'Role',        color: 'thief' },
-      { title: 'Unicorn',     component: 'Role',        color: 'unicorn' }
+      { title: 'Search Cards',  component: 'Search',      color: '',     icon: 'search' },
+      { title: 'Cave',          component: 'Role',        color: 'cave' },
+      { title: 'Dragon',        component: 'Role',        color: 'dragon' },
+      { title: 'Ghost',         component: 'Role',        color: 'ghost' },
+      { title: 'Ghoul',         component: 'Role',        color: 'ghoul' },
+      { title: 'Goblins',       component: 'Role',        color: 'goblins' },
+      { title: 'Knight',        component: 'Role',        color: 'knight' },
+      { title: 'Thief',         component: 'Role',        color: 'thief' },
+      { title: 'Unicorn',       component: 'Role',        color: 'unicorn' }
     ];
 
   }
