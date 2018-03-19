@@ -17,10 +17,10 @@ export const AllHelp = {
     'When using scorch, the Dragon should reveal and orient tiles one at a time instead of all at once.',
     'The Scale cards are not added to the Dragon\'s power deck automatically, instead they are only added when the Dragon successfully uses Smash or Wrath.',
     'When removing tiles, if a player piece is on it, that player must legally be able to exit the tile using their Forced Movement rules. If they cannot, the tile is not removed.',
-    'While above-ground, if the Dragon enters a tile with a role who can attack back, they will do so if they can.',
     'While above-ground, the Dragon cannot enter dark tiles.',
     'When revealing tiles, they must form an unbroken path to the entrance tile, if possible.',
-    'The Dragon may only move one cube per track per turn to the Wakefulness track.'
+    'The Dragon may only move one cube per track per turn to the Wakefulness track.',
+    'Movement/Other Players: Entering a tile with the Knight or Goblins prompts an attack from them only if their strength is high enough that they could do so.'
   ],
 
   Ghost: [
@@ -42,7 +42,8 @@ export const AllHelp = {
     'The Ghoul cannot attack the same player twice in the same turn.',
     'The Ghoul cannot use both a "once per turn" and a "once per game" effect on the same card.',
     'The Ghoul cannot use two of the same "once per game" effects in any turn.',
-    'Skitter Variant: The Ghoul may choose the tile type, and the skitterer may choose the specific tile.'
+    'Skitter Variant: The Ghoul may choose the tile type, and the skitterer may choose the specific tile.',
+    'Movement/Other Players: The Ghoul must spend +1 movement to enter a tile without attacking a player. If he cannot attack them, he must spend +1 to enter the tile.'
   ],
 
   Goblins: [
@@ -54,7 +55,9 @@ export const AllHelp = {
     'The AMBUSH section of each monster is not used when the Goblins are being played, only when no player is playing the Goblins or Vile Ghoul.',
     'When overpopulating, The Goblins may scatter any revealed tribe. If there are none, they may scatter any hidden tribe.',
     'When discarding monsters, the Bones tribe is able to choose which to discard if they have two.',
-    'If there are no valid tiles for a tribe to reveal to on the map, they may lurk next to any tile. On their next turn, they may only move onto the map.'
+    'If there are no valid tiles for a tribe to reveal to on the map, they may lurk next to any tile. On their next turn, they may only move onto the map.',
+    'Movement/Other Players: Entering a tile with the Knight or Dragon requires the Goblins strength to be greater than the targets strength or armor respectively.',
+    'Movement/Other Players: The Goblins may always enter the Thiefs tile, but to attack, the Goblins must be able to exceed the stealth of the Thief.'
   ],
 
   Knight: [
@@ -65,7 +68,12 @@ export const AllHelp = {
     'If a tile has multiple things to be encountered, the Knight still only has to spend one encounter to resolve all effects of that tile.',
     'The Knight gains one grit for every tile she reveals.',
     'The Knight may only attack the Dragon once per turn if he is underground.',
-    'When removing tiles, if a player piece is on it, that player must legally be able to exit the tile using their Forced Movement rules. If they cannot, the tile is not removed.'
+    'When removing tiles, if a player piece is on it, that player must legally be able to exit the tile using their Forced Movement rules. If they cannot, the tile is not removed.',
+    'Movement/Other Players: The Knight may freely enter a tile with the Dragon if he is underground, but must spend an encounter to attack him.',
+    'Movement/Other Players: The Knight may enter the tile with the Unicorn if her strength is greater than or equal to his armor. When equal, she must roll the dragon die to attack.',
+    'Movement/Other Players: The Knight cannot enter the tile with the Dragon while he is above ground unless her strength is equal to or greater than his armor.',
+    'Movement/Other Players: The Knight may only enter a tile with a Goblin tribe or Ghoul if her strength is greater than the targets strength. Entering this tile prompts an attack.',
+    'Movement/Other Players: The Knight may freely enter a tile with the Thief, but must spend an encounter to attack him.'
   ],
 
   Thief: [
@@ -73,18 +81,19 @@ export const AllHelp = {
     'The Thief must enter the entrance tile to stash treasure, but not necessarily stop on it.',
     'The Thief may only target a particular player once per turn across all of his actions.',
     'The Thief only returns Dragon Gems to the Dragon when stashing them. At that time, they are changed into normal treasure tokens.',
-    'After stashing any number of treasures, the Thief\'s loot drop level returns to 3.'
+    'After stashing any number of treasures, the Thief\'s loot drop level returns to 3.',
+    'Movement/Other Players: The Thief may always enter a tile containing another player.'
   ],
 
   Unicorn: [
     'The Unicorn can turn 90 or 180 degrees.',
     'The Unicorn may only interact with a treasure token or crystal if he ends his movement, teleport, or turn on that tile (not just passing by it).',
     'The Unicorn may not interact with a treasure or crystal if his action was angry.',
-    'When entering a tile with another player, the Unicorn always succeeds in the attack. Based on his anger, he does something different to each targeted player.',
     'The Unicorn teleports after the Ghoul skitters.',
     'When the Unicorn teleports (but not forced teleports), and before the collapse has begun, he may choose to teleport into an open space.',
     'The Displacement Blast action collapses the tile at the chosen destination.',
-    'Attacks happen before interacting with treasures or crystals.'
+    'Attacks happen before interacting with treasures or crystals.',
+    'Movement/Other Players: The Unicorn may always enter a tile containing another player. This prompts an attack against that player.'
   ]
 };
 
