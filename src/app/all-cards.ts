@@ -1,6 +1,93 @@
 
 import { CardType, Role } from './defs';
 
+export const AllHelp = {
+  Cave: [
+    'When prompted to place multiple tiles, you should place them one at a time, drawing new tiles in-between.',
+    'Any crystal tiles collapsed (even before the collapse) count towards the Cave\'s victory condition.',
+    'Used event cards and rejected treasures are removed from the game entirely.',
+    'Uncertain Treasures Variant: The Cave instead draws three treasures, puts one on the bottom of the deck. The Knight chooses one of the remaining two treasures to decide to accept or decline. The other treasure goes on the bottom of the deck.',
+    'The Cave can move a rockslide token if all 3 have been placed already.',
+    'The Cave gets credit during its Collect Omens phase if the Thief has any un-stashed treasures on his board.',
+    'When removing tiles, if a player piece is on it, that player must legally be able to exit the tile using their Forced Movement rules. If they cannot, the tile is not removed.',
+    'Treasure must be placed on a dark, unoccupied tile.'
+  ],
+
+  Dragon: [
+    'When using scorch, the Dragon should reveal and orient tiles one at a time instead of all at once.',
+    'The Scale cards are not added to the Dragon\'s power deck automatically, instead they are only added when the Dragon successfully uses Smash or Wrath.',
+    'When removing tiles, if a player piece is on it, that player must legally be able to exit the tile using their Forced Movement rules. If they cannot, the tile is not removed.',
+    'While above-ground, if the Dragon enters a tile with a role who can attack back, they will do so if they can.',
+    'While above-ground, the Dragon cannot enter dark tiles.',
+    'When revealing tiles, they must form an unbroken path to the entrance tile, if possible.',
+    'The Dragon may only move one cube per track per turn to the Wakefulness track.'
+  ],
+
+  Ghost: [
+    'The Ghost is unable to possess another role if any player is on a Ghost tile with a locked artifact.',
+    'The Ghost can move through open space, so long as she does not end her turn on one.',
+    'The Ghost may not end her turn on a space with an artifact, or a space that contains a player holding one.',
+    'A player can only use Mental Block on the Ghost if they occupy the same tile at any point in time during their turn.',
+    'The Ghost can use telekinesis to move a player onto a tile to lock an artifact.',
+    'The Goblins artifact is assigned to the first revealed tribe. If that tribe leaves the map, so does the artifact. The artifact is then assigned to the next tribe to reveal.',
+    'The Ghost may force a possessed player to drop or collect an artifact on their space during the possession turn, but the possessed player can still only hold one artifact at most.',
+    'Ghost tiles without a locked artifact on them cannot be collapsed.',
+    'The Cave player must have three separate piles of tiles (instead of one) with two Ghost tiles in each pile.',
+    'The Cave Ghost has special rules for most Cave abilities. In general, they must be operating on tiles adjacent to the Cave Ghost.',
+    'The Cave Ghost\'s possessions cannot be blocked.',
+    'Treasure must be placed on a dark, unoccupied tile.'
+  ],
+
+  Ghoul: [
+    'The Ghoul cannot attack the same player twice in the same turn.',
+    'The Ghoul cannot use both a "once per turn" and a "once per game" effect on the same card.',
+    'The Ghoul cannot use two of the same "once per game" effects in any turn.',
+    'Skitter Variant: The Ghoul may choose the tile type, and the skitterer may choose the specific tile.'
+  ],
+
+  Goblins: [
+    'The Goblins cannot use more strength tokens than allowed by the game, it is a hard limit.',
+    'Card with a treasure chest in the top right are Schemes. The Goblins must pay for them with treasure. They cannot plunder and carry treasure unless they have a Scheme. Schemes cost 1 Treasure + the # of Schemes you have to buy.',
+    'The Goblins may hold a maximum of 5 Secret cards at any time.',
+    'Purchased Schemes do not count towards the Secret limit of 5.',
+    'When removing tiles, if a player piece is on it, that player must legally be able to exit the tile using their Forced Movement rules. If they cannot, the tile is not removed.',
+    'The AMBUSH section of each monster is not used when the Goblins are being played, only when no player is playing the Goblins or Vile Ghoul.',
+    'When overpopulating, The Goblins may scatter any revealed tribe. If there are none, they may scatter any hidden tribe.',
+    'When discarding monsters, the Bones tribe is able to choose which to discard if they have two.',
+    'If there are no valid tiles for a tribe to reveal to on the map, they may lurk next to any tile. On their next turn, they may only move onto the map.'
+  ],
+
+  Knight: [
+    'The Knight can\'t move if she has no encounters left.',
+    'The Knight can never lose her first two Hero Cubes.',
+    'The Knight may always immediately allocate Hero Cubes when they are obtained.',
+    'If the Knight is attacked, she may allocate any unused Hero Cubes to strength.',
+    'If a tile has multiple things to be encountered, the Knight still only has to spend one encounter to resolve all effects of that tile.',
+    'The Knight gains one grit for every tile she reveals.',
+    'The Knight may only attack the Dragon once per turn if he is underground.',
+    'When removing tiles, if a player piece is on it, that player must legally be able to exit the tile using their Forced Movement rules. If they cannot, the tile is not removed.'
+  ],
+
+  Thief: [
+    'The Thief may re-allocate his stats every turn.',
+    'The Thief must enter the entrance tile to stash treasure, but not necessarily stop on it.',
+    'The Thief may only target a particular player once per turn across all of his actions.',
+    'The Thief only returns Dragon Gems to the Dragon when stashing them. At that time, they are changed into normal treasure tokens.',
+    'After stashing any number of treasures, the Thief\'s loot drop level returns to 3.'
+  ],
+
+  Unicorn: [
+    'The Unicorn can turn 90 or 180 degrees.',
+    'The Unicorn may only interact with a treasure token or crystal if he ends his movement, teleport, or turn on that tile (not just passing by it).',
+    'The Unicorn may not interact with a treasure or crystal if his action was angry.',
+    'When entering a tile with another player, the Unicorn always succeeds in the attack. Based on his anger, he does something different to each targeted player.',
+    'The Unicorn teleports after the Ghoul skitters.',
+    'When the Unicorn teleports (but not forced teleports), and before the collapse has begun, he may choose to teleport into an open space.',
+    'The Displacement Blast action collapses the tile at the chosen destination.',
+    'Attacks happen before interacting with treasures or crystals.'
+  ]
+};
+
 export const AllRules = {
   Cave: [
     'Cave'

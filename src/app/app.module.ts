@@ -9,12 +9,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { IonicStorageModule } from '@ionic/storage';
 
-import { OverflowOptionsPage } from '../pages/role/role';
+import { OverflowOptionsPage, FAQModalPage } from '../pages/role/role';
 
 @NgModule({
   declarations: [
     MyApp,
-    OverflowOptionsPage
+    OverflowOptionsPage,
+    FAQModalPage
   ],
   imports: [
     BrowserModule,
@@ -25,7 +26,8 @@ import { OverflowOptionsPage } from '../pages/role/role';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    OverflowOptionsPage
+    OverflowOptionsPage,
+    FAQModalPage
   ],
   providers: [
     StatusBar,

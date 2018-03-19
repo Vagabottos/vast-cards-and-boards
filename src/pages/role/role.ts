@@ -1,5 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { NavParams, IonicPage, Platform, Slides, PopoverController } from 'ionic-angular';
+import {
+  NavParams, IonicPage, Platform, Slides, PopoverController, ViewController,
+  ModalController
+} from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 
 import { ImageViewerController }  from 'ionic-img-viewer';
@@ -7,7 +10,7 @@ import { ImageViewerController }  from 'ionic-img-viewer';
 import * as _ from 'lodash';
 
 import { Role } from '../../app/defs';
-import { AllRules, AllBoards, AllCards, Card } from '../../app/all-cards';
+import { AllRules, AllBoards, AllCards, Card, AllHelp } from '../../app/all-cards';
 
 @IonicPage({
   name: 'Role',
@@ -48,6 +51,7 @@ export class RolePage implements OnInit {
     public navParams: NavParams,
     public platform: Platform,
     private popoverCtrl: PopoverController,
+    private modalCtrl: ModalController,
     private storage: Storage,
     private imageViewer: ImageViewerController
   ) {}
@@ -120,6 +124,10 @@ export class RolePage implements OnInit {
     });
   }
 
+  public openFAQ() {
+    this.modalCtrl.create(FAQModalPage, { role: this.role, faqs: AllHelp[this.role] }).present();
+  }
+
 }
 
 @Component({
@@ -149,5 +157,45 @@ export class OverflowOptionsPage {
   ngOnInit() {
     this.boards = this.navParams.get('boards');
     this.rules  = this.navParams.get('rules');
+  }
+}
+
+@Component({
+  template: `
+    <ion-header>
+      <ion-toolbar [color]="role.toLowerCase()">
+        <ion-title>
+          The {{ role }} FAQ
+        </ion-title>
+        <ion-buttons start>
+          <button ion-button icon-only (click)="viewCtrl.dismiss()">
+            <ion-icon name="close"></ion-icon>
+          </button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-item *ngFor="let faq of faqs" text-wrap>
+          {{ faq }}
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  `
+})
+export class FAQModalPage {
+
+  public role: Role;
+  public faqs: string[];
+
+  constructor(
+    public navParams: NavParams,
+    public viewCtrl: ViewController
+  ) {}
+
+  ngOnInit() {
+    this.role = this.navParams.get('role');
+    this.faqs  = this.navParams.get('faqs');
   }
 }
