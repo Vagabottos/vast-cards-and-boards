@@ -6,11 +6,12 @@ export const AllHelp = {
     'When prompted to place multiple tiles, you should place them one at a time, drawing new tiles in-between.',
     'Any crystal tiles collapsed (even before the collapse) count towards the Cave\'s victory condition.',
     'Used event cards and rejected treasures are removed from the game entirely.',
-    'Uncertain Treasures Variant: The Cave instead draws three treasures, puts one on the bottom of the deck. The Knight chooses one of the remaining two treasures to decide to accept or decline. The other treasure goes on the bottom of the deck.',
     'The Cave can move a rockslide token if all 3 have been placed already.',
     'The Cave gets credit during its Collect Omens phase if the Thief has any un-stashed treasures on his board.',
     'When removing tiles, if a player piece is on it, that player must legally be able to exit the tile using their Forced Movement rules. If they cannot, the tile is not removed.',
-    'Treasure must be placed on a dark, unoccupied tile.'
+    'Treasure must be placed on a dark, unoccupied tile.',
+    'Variant/Uncertain Treasures: The Cave instead draws three treasures, puts one on the bottom of the deck. The Knight chooses one of the remaining two treasures to decide to accept or decline. The other treasure goes on the bottom of the deck.'
+    'Variant/Setup: In a game with 6 or more players, the Cave should take the Crowded House variant card.'
   ],
 
   Dragon: [
@@ -22,7 +23,10 @@ export const AllHelp = {
     'The Dragon may only move one cube per track per turn to the Wakefulness track.',
     'Movement/Other Players: Entering a tile with the Knight or Goblins prompts an attack from them only if their strength is high enough that they could do so.',
     'Movement/Other Players: Entering a tile with the Ghoul while underground is always possible.',
-    'Movement/Other Players: Entering a tile with the Ghoul while above ground requires that the Dragon\'s armor be greater than the Ghoul\'s defense.'
+    'Movement/Other Players: Entering a tile with the Ghoul while above ground requires that the Dragon\'s armor be greater than the Ghoul\'s defense.',
+    'Variant/Setup: If the Knight is not attacking the Dragon, the Dragon should take the Ash Dragon variant card.',
+    'Variant/Setup: If there is no Cave, the Dragon should take the Past Plunder variant card.',
+    'Variant/Setup: In a solo game, the Dragon should take the Alone in the Dark variant card.'
   ],
 
   Ghost: [
@@ -38,15 +42,19 @@ export const AllHelp = {
     'The Cave Ghost\'s possessions cannot be blocked.',
     'Treasure must be placed on a dark, unoccupied tile.',
     'Movement/Other Players: The Ghost can move through open space, so long as she does not end her turn on one.',
-    'Movement/Other Players: The Ghost may always enter another players tile.'
+    'Movement/Other Players: The Ghost may always enter another players tile.',
+    'Variant/Setup: In a solo game, the Ghost should take the Alone in the Dark II variant card.',
+    'Variant/Setup: In a game with 6 or more players, the Cave Ghost should take the Crowded House variant card.'
   ],
 
   Ghoul: [
     'The Ghoul cannot attack the same player twice in the same turn.',
     'The Ghoul cannot use both a "once per turn" and a "once per game" effect on the same card.',
     'The Ghoul cannot use two of the same "once per game" effects in any turn.',
-    'Skitter Variant: The Ghoul may choose the tile type, and the skitterer may choose the specific tile.',
-    'Movement/Other Players: The Ghoul must spend +1 movement to enter a tile without attacking a player. If he cannot attack them, he must spend +1 to enter the tile.'
+    'Movement/Other Players: The Ghoul must spend +1 movement to enter a tile without attacking a player. If he cannot attack them, he must spend +1 to enter the tile.',
+    'Variant/Skittering: The Ghoul may choose the tile type, and the skitterer may choose the specific tile.',
+    'Variant/Setup: If there is no Dragon and no Cave, the Vile Ghoul should take the Past Plunder variant card.',
+    'Variant/Setup: In a solo game, the Ghoul should take the Alone in the Dark II variant card.'
   ],
 
   Goblins: [
@@ -61,7 +69,11 @@ export const AllHelp = {
     'If there are no valid tiles for a tribe to reveal to on the map, they may lurk next to any tile. On their next turn, they may only move onto the map.',
     'Movement/Other Players: Entering a tile with the Knight or Dragon requires the Goblins strength to be greater than the targets strength or armor respectively.',
     'Movement/Other Players: The Goblins may always enter the Thiefs tile, but to attack, the Goblins must be able to exceed the stealth of the Thief.',
-    'Movement/Other Players: Entering a tile with the Ghoul requires that the tribe strength be greater than the defense of the Ghoul.'
+    'Movement/Other Players: Entering a tile with the Ghoul requires that the tribe strength be greater than the defense of the Ghoul.',
+    'Variant/Setup: If there is no Dragon (or Unicorn) and no Cave, the Goblins should take the Past Plunder card.',
+    'Variant/Setup: If the Goblins are playing against only the Dragon (or Unicorn), the Goblins should take the Past Plunder variant card.',
+    'Variant/Setup: If the Goblins are playing against only the Cave, the Goblins should take the Flare variant card.',
+    'Variant/Setup: In a solo game, the Goblins should take the Alone in the Dark variant card.'
   ],
 
   Knight: [
@@ -78,7 +90,11 @@ export const AllHelp = {
     'Movement/Other Players: The Knight cannot enter the tile with the Dragon while he is above ground unless her strength is equal to or greater than his armor.',
     'Movement/Other Players: The Knight may only enter a tile with a Goblin tribe if her strength is greater than the tribes strength. Entering this tile prompts an attack.',
     'Movement/Other Players: The Knight may only enter a tile with the Ghoul if her strength is greater than the Ghouls defense. Entering this tile prompts an attack.',
-    'Movement/Other Players: The Knight may freely enter a tile with the Thief, but must spend an encounter to attack him.'
+    'Movement/Other Players: The Knight may freely enter a tile with the Thief, but must spend an encounter to attack him.',
+    'Variant/Setup: If there are no Goblins or Vile Ghoul, the Knight should take the Goblin Infestation variant card.',
+    'Variant/Setup: If the Knight is playing against only the Cave, the Knight should take the Flare variant card.',
+    'Variant/Setup: If there is no Dragon (or Unicorn), the Knight should take the Flare variant card.',
+    'Variant/Setup: In a solo game, the Knight should take the Alone in the Dark variant card.'
   ],
 
   Thief: [
@@ -88,7 +104,9 @@ export const AllHelp = {
     'The Thief only returns Dragon Gems to the Dragon when stashing them. At that time, they are changed into normal treasure tokens.',
     'After stashing any number of treasures, the Thief\'s loot drop level returns to 3.',
     'Movement/Other Players: The Thief may always enter a tile containing another player.',
-    'Movement/Other Players: The Thief may only enter a tile containing the Ghoul if his stealth is greater than the Ghouls defense.'
+    'Movement/Other Players: The Thief may only enter a tile containing the Ghoul if his stealth is greater than the Ghouls defense.',
+    'Variant/Setup: If there are two or fewer other players, the Thief should take the Flare variant card (in this game, Past Plunder is not used).',
+    'Variant/Setup: In a solo game, the Thief should take the Alone in the Dark variant card.'
   ],
 
   Unicorn: [
@@ -99,7 +117,9 @@ export const AllHelp = {
     'When the Unicorn teleports (but not forced teleports), and before the collapse has begun, he may choose to teleport into an open space.',
     'The Displacement Blast action collapses the tile at the chosen destination.',
     'Attacks happen before interacting with treasures or crystals.',
-    'Movement/Other Players: The Unicorn may always enter a tile containing another player. This prompts an attack against that player.'
+    'Movement/Other Players: The Unicorn may always enter a tile containing another player. This prompts an attack against that player.',
+    'Variant/Setup: If there is no Cave and no Dragon, the Unicorn should take the Past Plunder variant card.',
+    'Variant/Setup: In a solo game, the Unicorn should take the Alone in the Dark II variant card.'
   ]
 };
 
