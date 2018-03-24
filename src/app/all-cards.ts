@@ -20,12 +20,13 @@ export const AllHelp = {
     'While above-ground, the Dragon cannot enter dark tiles.',
     'When revealing tiles, they must form an unbroken path to the entrance tile, if possible.',
     'The Dragon may only move one cube per track per turn to the Wakefulness track.',
-    'Movement/Other Players: Entering a tile with the Knight or Goblins prompts an attack from them only if their strength is high enough that they could do so.'
+    'Movement/Other Players: Entering a tile with the Knight or Goblins prompts an attack from them only if their strength is high enough that they could do so.',
+    'Movement/Other Players: Entering a tile with the Ghoul while underground is always possible.',
+    'Movement/Other Players: Entering a tile with the Ghoul while above ground requires that the Dragon\'s armor be greater than the Ghoul\'s defense.'
   ],
 
   Ghost: [
     'The Ghost is unable to possess another role if any player is on a Ghost tile with a locked artifact.',
-    'The Ghost can move through open space, so long as she does not end her turn on one.',
     'The Ghost may not end her turn on a space with an artifact, or a space that contains a player holding one.',
     'A player can only use Mental Block on the Ghost if they occupy the same tile at any point in time during their turn.',
     'The Ghost can use telekinesis to move a player onto a tile to lock an artifact.',
@@ -35,7 +36,9 @@ export const AllHelp = {
     'The Cave player must have three separate piles of tiles (instead of one) with two Ghost tiles in each pile.',
     'The Cave Ghost has special rules for most Cave abilities. In general, they must be operating on tiles adjacent to the Cave Ghost.',
     'The Cave Ghost\'s possessions cannot be blocked.',
-    'Treasure must be placed on a dark, unoccupied tile.'
+    'Treasure must be placed on a dark, unoccupied tile.',
+    'Movement/Other Players: The Ghost can move through open space, so long as she does not end her turn on one.',
+    'Movement/Other Players: The Ghost may always enter another players tile.'
   ],
 
   Ghoul: [
@@ -57,7 +60,8 @@ export const AllHelp = {
     'When discarding monsters, the Bones tribe is able to choose which to discard if they have two.',
     'If there are no valid tiles for a tribe to reveal to on the map, they may lurk next to any tile. On their next turn, they may only move onto the map.',
     'Movement/Other Players: Entering a tile with the Knight or Dragon requires the Goblins strength to be greater than the targets strength or armor respectively.',
-    'Movement/Other Players: The Goblins may always enter the Thiefs tile, but to attack, the Goblins must be able to exceed the stealth of the Thief.'
+    'Movement/Other Players: The Goblins may always enter the Thiefs tile, but to attack, the Goblins must be able to exceed the stealth of the Thief.',
+    'Movement/Other Players: Entering a tile with the Ghoul requires that the tribe strength be greater than the defense of the Ghoul.'
   ],
 
   Knight: [
@@ -72,7 +76,8 @@ export const AllHelp = {
     'Movement/Other Players: The Knight may freely enter a tile with the Dragon if he is underground, but must spend an encounter to attack him.',
     'Movement/Other Players: The Knight may enter the tile with the Unicorn if her strength is greater than or equal to his armor. When equal, she must roll the dragon die to attack.',
     'Movement/Other Players: The Knight cannot enter the tile with the Dragon while he is above ground unless her strength is equal to or greater than his armor.',
-    'Movement/Other Players: The Knight may only enter a tile with a Goblin tribe or Ghoul if her strength is greater than the targets strength. Entering this tile prompts an attack.',
+    'Movement/Other Players: The Knight may only enter a tile with a Goblin tribe if her strength is greater than the tribes strength. Entering this tile prompts an attack.',
+    'Movement/Other Players: The Knight may only enter a tile with the Ghoul if her strength is greater than the Ghouls defense. Entering this tile prompts an attack.',
     'Movement/Other Players: The Knight may freely enter a tile with the Thief, but must spend an encounter to attack him.'
   ],
 
@@ -82,7 +87,8 @@ export const AllHelp = {
     'The Thief may only target a particular player once per turn across all of his actions.',
     'The Thief only returns Dragon Gems to the Dragon when stashing them. At that time, they are changed into normal treasure tokens.',
     'After stashing any number of treasures, the Thief\'s loot drop level returns to 3.',
-    'Movement/Other Players: The Thief may always enter a tile containing another player.'
+    'Movement/Other Players: The Thief may always enter a tile containing another player.',
+    'Movement/Other Players: The Thief may only enter a tile containing the Ghoul if his stealth is greater than the Ghouls defense.'
   ],
 
   Unicorn: [
