@@ -10,7 +10,7 @@ export const AllHelp = {
     'The Cave gets credit during its Collect Omens phase if the Thief has any un-stashed treasures on his board.',
     'When removing tiles, if a player piece is on it, that player must legally be able to exit the tile using their Forced Movement rules. If they cannot, the tile is not removed.',
     'Treasure must be placed on a dark, unoccupied tile.',
-    'Variant/Uncertain Treasures: The Cave instead draws three treasures, puts one on the bottom of the deck. The Knight chooses one of the remaining two treasures to decide to accept or decline. The other treasure goes on the bottom of the deck.'
+    'Variant/Uncertain Treasures: The Cave instead draws three treasures, puts one on the bottom of the deck. The Knight chooses one of the remaining two treasures to decide to accept or decline. The other treasure goes on the bottom of the deck.',
     'Variant/Setup: In a game with 6 or more players, the Cave should take the Crowded House variant card.'
   ],
 
