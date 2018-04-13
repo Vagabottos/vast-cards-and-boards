@@ -102,6 +102,7 @@ export const AllHelp = {
     'The Thief must enter the entrance tile to stash treasure, but not necessarily stop on it.',
     'The Thief may only target a particular player once per turn across all of his actions.',
     'The Thief only returns Dragon Gems to the Dragon when stashing them. At that time, they are changed into normal treasure tokens.',
+    'The Thief only resets his Loot Drop Level when he stashes a treasure.',
     'After stashing any number of treasures, the Thief\'s loot drop level returns to 3.',
     'Movement/Other Players: The Thief may always enter a tile containing another player.',
     'Movement/Other Players: The Thief may only enter a tile containing the Ghoul if his stealth is greater than the Ghouls defense.',
