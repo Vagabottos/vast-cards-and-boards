@@ -66,6 +66,7 @@ export const AllHelp = {
     'The AMBUSH section of each monster is not used when the Goblins are being played, only when no player is playing the Goblins or Vile Ghoul.',
     'When overpopulating, The Goblins may scatter any revealed tribe. If there are none, they may scatter any hidden tribe.',
     'When discarding monsters, the Bones tribe is able to choose which to discard if they have two.',
+    'When assigning monsters, the total number of monsters cannot exceed the population of the bones tribe.',
     'If there are no valid tiles for a tribe to reveal to on the map, they may lurk next to any tile. On their next turn, they may only move onto the map.',
     'Movement/Other Players: Entering a tile with the Knight or Dragon requires the Goblins strength to be greater than the targets strength or armor respectively.',
     'Movement/Other Players: The Goblins may always enter the Thiefs tile, but to attack, the Goblins must be able to exceed the stealth of the Thief.',
